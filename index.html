@@ -4,33 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Geno's Euro Garage | Website Coming Soon</title>
+    <!-- Imported Google Font: Feeling Passionate -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Feeling+Passionate&display=swap" rel="stylesheet">
+    
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
         
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             background-color: #1a202c;
-            /* Textured carbon pattern background */
+            /* Textured dark carbon background */
             background-image: 
                 radial-gradient(#2d3748 15%, transparent 16%),
                 radial-gradient(#2d3748 15%, transparent 16%);
             background-size: 12px 12px;
             background-position: 0 0, 6px 6px;
-            color: #f7fafc;
+            color: #1e293b;
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 20px;
+            padding: 30px 20px 60px 20px;
         }
 
-        /* Torn paper container */
+        /* Torn paper container (White for high contrast) */
         .tear-container {
             position: relative;
-            max-width: 550px;
+            max-width: 580px;
             width: 100%;
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-            padding: 50px 30px 40px 30px;
+            background-color: #ffffff;
+            padding: 45px 35px 35px 35px;
             text-align: center;
             box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
             border-left: 8px solid #ffffff;
@@ -57,87 +62,95 @@
             bottom: -35px;
             left: 50%;
             transform: translateX(-50%);
-            width: 80%;
+            width: 85%;
             height: 35px;
-            background: linear-gradient(to bottom, #e2e8f0 0%, #cbd5e1 50%, #94a3b8 100%);
+            background: linear-gradient(to bottom, #f1f5f9 0%, #cbd5e1 50%, #94a3b8 100%);
             border-radius: 0 0 20px 20px;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
-            border-top: 2px solid #64748b;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.4);
+            border-top: 2px solid #94a3b8;
         }
 
         /* Logo styling */
         .logo-img {
-            max-width: 220px;
+            max-width: 240px;
             width: 100%;
             height: auto;
-            margin-bottom: 20px;
-            filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
+            margin-bottom: 15px;
+            display: inline-block;
         }
 
-        h1 {
-            font-size: 2rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: #38bdf8;
-            margin-bottom: 5px;
-        }
-
-        .subtitle {
-            font-size: 1rem;
-            color: #94a3b8;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            margin-bottom: 25px;
-            border-top: 1px dashed #475569;
-            border-bottom: 1px dashed #475569;
-            padding: 8px 0;
+        /* "Website Coming Soon" styled with Feeling Passionate font */
+        .coming-soon-heading {
+            font-family: 'Feeling Passionate', cursive, sans-serif;
+            font-size: 2.8rem;
+            color: #0f172a;
+            margin-bottom: 15px;
+            line-height: 1.2;
         }
 
         p {
             font-size: 0.95rem;
             line-height: 1.6;
-            color: #cbd5e1;
-            margin-bottom: 30px;
+            color: #334155;
+            margin-bottom: 25px;
         }
 
-        /* Call-to-action buttons */
-        .btn-group {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            margin-bottom: 10px;
+        /* Vehicle Inquiry Form CTA Button */
+        .cta-container {
+            margin-bottom: 25px;
         }
 
-        .btn {
-            display: block;
-            padding: 12px 20px;
+        .btn-inquiry {
+            display: inline-block;
+            background-color: #0284c7;
+            color: #ffffff;
+            padding: 14px 28px;
             border-radius: 6px;
-            font-weight: 600;
+            font-weight: 700;
             text-decoration: none;
             text-transform: uppercase;
             letter-spacing: 1px;
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             transition: all 0.2s ease;
+            box-shadow: 0 4px 6px -1px rgba(2, 132, 199, 0.3);
         }
 
-        .btn-primary {
-            background-color: #0284c7;
-            color: #ffffff;
-        }
-
-        .btn-secondary {
-            background-color: #334155;
-            color: #ffffff;
-            border: 1px solid #475569;
-        }
-
-        .btn:hover {
-            opacity: 0.9;
+        .btn-inquiry:hover {
+            background-color: #0369a1;
             transform: translateY(-2px);
+            box-shadow: 0 6px 8px -1px rgba(2, 132, 199, 0.4);
+        }
+
+        /* Clean Sans-Serif Inline Links */
+        .nav-links {
+            font-size: 0.9rem;
+            color: #475569;
+            margin-bottom: 25px;
+            line-height: 1.8;
+            border-top: 1px solid #e2e8f0;
+            border-bottom: 1px solid #e2e8f0;
+            padding: 12px 0;
+        }
+
+        .nav-links a {
+            color: #0f172a;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: #0284c7;
+            text-decoration: underline;
+        }
+
+        .separator {
+            margin: 0 8px;
+            color: #cbd5e1;
+            font-weight: 300;
         }
 
         .footer-text {
-            margin-top: 25px;
             font-size: 0.75rem;
             color: #64748b;
         }
@@ -147,16 +160,25 @@
 
     <div class="tear-container">
         <!-- Logo Image -->
-        <img src="logo.png" alt="Geno's Euro Garage Logo" class="logo-img">
+        <img src="logo.png" alt="Geno's Euro Garage" class="logo-img">
 
-        <h1>Website</h1>
-        <div class="subtitle">Coming Soon</div>
+        <!-- Combined Title in Feeling Passionate font -->
+        <div class="coming-soon-heading">Website Coming Soon</div>
 
         <p>Mobile automotive service, serving Northeast Georgia & Upstate South Carolina. Dealer-level care delivered straight to your driveway.</p>
 
-        <div class="btn-group">
-            <a href="tel:17069”630193 class="btn btn-primary">📞 Call / Text Us</a>
-            <a href="https://facebook.com" target="https://www.facebook.com/genoseurogarage" class="btn btn-secondary">📘 Facebook Page</a>
+        <!-- Vehicle Inquiry Form Button -->
+        <div class="cta-container">
+            <a href="https://forms.gle/d2iuumnnW3zNXaGx8" target="_blank" class="btn-inquiry">Submit a Vehicle Inquiry Form</a>
+        </div>
+
+        <!-- Sans-Serif Inline Navigation Links -->
+        <div class="nav-links">
+            <a href="tel:17069630193">Call / Text Us</a>
+            <span class="separator">|</span>
+            <a href="https://facebook.com/genoseurogarage" target="_blank">Follow our Facebook page for updates</a>
+            <span class="separator">|</span>
+            <a href="https://instagram.com/genoseurogarage" target="_blank">Instagram</a>
         </div>
 
         <div class="footer-text">
