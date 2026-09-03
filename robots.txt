@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://genoseurogarage.com/sitemap.xml
