@@ -31,10 +31,15 @@
       width: 100%;
       padding: 40px 30px;
       box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      /* Centers all inner elements */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
     }
     .header {
-      text-align: center;
       margin-bottom: 28px;
+      width: 100%;
     }
     .header h1 {
       font-size: 26px;
@@ -47,9 +52,39 @@
       font-size: 15px;
       line-height: 1.5;
     }
-    .btn {
-      display: block;
+    .form-group {
       width: 100%;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    label {
+      display: block;
+      font-size: 14px;
+      color: #cccccc;
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+    input {
+      width: 100%;
+      max-width: 400px;
+      padding: 12px 16px;
+      background-color: #242424;
+      border: 1px solid #3d3d3d;
+      border-radius: 6px;
+      color: #ffffff;
+      font-size: 15px;
+      outline: none;
+      text-align: center; /* Centers input text */
+      transition: border-color 0.2s ease;
+      margin: 0 auto;
+    }
+    input:focus {
+      border-color: #ffffff;
+    }
+    .btn {
+      display: inline-block;
+      width: 100%;
+      max-width: 400px;
       background-color: #ffffff;
       color: #000000;
       font-weight: 700;
@@ -61,7 +96,7 @@
       text-align: center;
       text-decoration: none;
       transition: background-color 0.2s ease;
-      margin-top: 10px;
+      margin: 10px auto 0 auto;
     }
     .btn:hover {
       background-color: #e0e0e0;
@@ -74,6 +109,7 @@
       margin-top: 24px;
       font-size: 13px;
       color: #888888;
+      width: 100%;
     }
     .security-notice svg {
       width: 16px;
@@ -87,6 +123,7 @@
       line-height: 1.4;
       text-align: center;
       font-style: italic;
+      width: 100%;
     }
     .footer-note {
       margin-top: 16px;
@@ -95,6 +132,7 @@
       text-align: center;
       font-size: 13px;
       color: #666666;
+      width: 100%;
     }
   </style>
 </head>
@@ -105,9 +143,8 @@
       <h1>Online Payment Portal</h1>
       <p>Pay your invoice securely for on-site diagnostic, repair, or maintenance services.</p>
     </div>
-    
-<div id="paypal-container-GFZY8AMJNW2ZQ"></div>
-    
+
+   <div id="paypal-container-GFZY8AMJNW2ZQ"></div>
 <script>
   paypal.HostedButtons({
     hostedButtonId: "GFZY8AMJNW2ZQ",
