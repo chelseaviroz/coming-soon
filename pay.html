@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pay Invoice | Geno's Euro Garage</title>
+  <script 
+  src="https://www.paypal.com/sdk/js?client-id=BAAeBec7ML7L7uTyRaFKFxbkI4o_N5vcoh9OjCFWdOiorAlhHevsTI5zXdjYqPopIgfk3ouMIq2sn18udQ&components=hosted-buttons&enable-funding=venmo&currency=USD">
+</script>
   <style>
     * {
       box-sizing: border-box;
@@ -102,9 +105,12 @@
       <h1>Online Payment Portal</h1>
       <p>Pay your invoice securely for on-site diagnostic, repair, or maintenance services.</p>
     </div>
-
-    <!-- REPLACE LINK BELOW WITH YOUR STRIPE OR SQUARE PAYMENT LINK -->
-    <a href="YOUR_PAYMENT_PROCESSOR_LINK_HERE" class="btn">Proceed to Secure Checkout</a>
+<div id="paypal-container-GFZY8AMJNW2ZQ"></div>
+<script>
+  paypal.HostedButtons({
+    hostedButtonId: "GFZY8AMJNW2ZQ",
+  }).render("#paypal-container-GFZY8AMJNW2ZQ")
+</script>
 
     <div class="security-notice">
       <svg viewBox="0 0 24 24">
