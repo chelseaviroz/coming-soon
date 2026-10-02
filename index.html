@@ -219,44 +219,6 @@ html, body {
 body {
   padding-top: 80px !important;
 }
-
-/* BASE TEXT-ONLY BUTTON STYLE */
-.action-btn {
-  flex: 1;
-  display: inline-block;
-  text-align: center;
-  padding: 10px 20px;
-  border-radius: 4px;
-  font-weight: 600;
-  font-size: 14px;
-  text-decoration: none !important;
-  transition: all 0.2s ease;
-  box-sizing: border-box;
-}
-
-/* CALL US BUTTON (SOLID WHITE) */
-.call-btn {
-  background-color: #ffffff;
-  color: #000000 !important;
-  border: 1px solid #ffffff;
-}
-
-.call-btn:hover {
-  background-color: #e0e0e0;
-  border-color: #e0e0e0;
-}
-
-/* TEXT US BUTTON (DARK CARD WITH WHITE BORDER) */
-.text-btn {
-  background-color: #1a1a1a;
-  color: #ffffff !important;
-  border: 1px solid #333333;
-}
-
-.text-btn:hover {
-  background-color: #333333;
-  border-color: #555555;
-}
     </style>
     
 <meta name="description" content="Dedicated European mobile mechanic, servicing Northeast Georgia and Upstate South Carolina, combining quality care with mobile convenience. All makes and models welcome">
@@ -382,11 +344,24 @@ body {
             <a href="https://forms.gle/d2iuumnnW3zNXaGx8" target="_blank" class="btn-inquiry">Submit a Vehicle Inquiry Form</a>
         </div>
 
-<!-- DIRECT TEXT-ONLY CONTACT BUTTONS -->
+        <div class="nav-links">
+<!-- DIRECT CONTACT ACTION BUTTONS -->
 <div class="contact-actions-container">
-  <a href="tel:17069630193" class="action-btn call-btn">Call Us</a>
-  <a href="sms:17069630193?body=Hi%20Geno's%20Euro%20Garage,%20I'm%20interested%20in%20scheduling%20a%20service." class="action-btn text-btn">Text Us</a>
-</div>       
+  <a href="tel:7069630193" class="action-btn call-btn">
+    <svg viewBox="0 0 24 24" class="btn-icon">
+      <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+    </svg>
+    Call Us
+  </a>
+          <span class="separator">|</span>
+
+  <a href="sms:7069630193?body=Hi%20Geno's%20Euro%20Garage,%20I'm%20interested%20in%20scheduling%20a%20service." class="action-btn text-btn">
+    <svg viewBox="0 0 24 24" class="btn-icon">
+      <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.17L4 17.17V4h16v12z"/>
+    </svg>
+    Text Us
+  </a>
+</div>           
           <span class="separator">|</span>
             <a href="https://facebook.com/genoseurogarage" target="_blank">Follow our Facebook page for updates</a>
             <span class="separator">|</span>
