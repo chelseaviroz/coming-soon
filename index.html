@@ -1,36 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-    <header>
-  <div class="logo">
-    <!-- Your Geno's Euro Garage Logo / Title -->
+<header class="top-header">
+  <div class="header-container">
+    
+    <!-- BRAND / LOGO -->
+    <a href="index.html" class="brand-logo">Geno's Euro Garage</a>
+
+    <!-- NAVIGATION LINKS -->
+    <nav class="nav-menu">
+      <a href="index.html">Home</a>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      
+      <!-- PAY INVOICE BUTTON -->
+      <a href="pay.html" class="nav-pay-btn">Pay Invoice</a>
+    </nav>
+
   </div>
-
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="#services">Services</a>
-    <a href="#about">About</a>
-    <a href="pay.html" class="nav-pay-btn">Pay Invoice</a>
-  </nav>
 </header>
-<head>
-<style>
-    .nav-pay-btn {
-  background-color: transparent;
-  color: #ffffff;
-  border: 1px solid #ffffff;
-  padding: 8px 16px;
-  border-radius: 4px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 14px;
-  transition: all 0.2s ease;
-}
-
-.nav-pay-btn:hover {
-  background-color: #ffffff;
-  color: #000000;
-}
-</style>
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -158,6 +145,66 @@
             font-size: 0.75rem;
             color: #64748b;
         }
+        /* TOP NAVIGATION BAR STYLES */
+.top-header {
+  width: 100%;
+  background-color: #121212;
+  border-bottom: 1px solid #2d2d2d;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand-logo {
+  font-weight: 700;
+  font-size: 18px;
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-menu a {
+  color: #a0a0a0;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav-menu a:hover {
+  color: #ffffff;
+}
+
+/* PAY INVOICE BUTTON */
+.nav-menu .nav-pay-btn {
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.nav-menu .nav-pay-btn:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
     </style>
     
 <meta name="description" content="Dedicated European mobile mechanic, servicing Northeast Georgia and Upstate South Carolina, combining quality care with mobile convenience. All makes and models welcome">
