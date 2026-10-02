@@ -145,65 +145,78 @@
             font-size: 0.75rem;
             color: #64748b;
         }
-        /* TOP NAVIGATION BAR STYLES */
+     /* FIXED TOP NAVIGATION BAR */
 .top-header {
   width: 100%;
   background-color: #121212;
   border-bottom: 1px solid #2d2d2d;
-  position: sticky;
+  position: fixed; /* Fixes bar directly to top of viewport */
   top: 0;
-  z-index: 1000;
+  left: 0;
+  z-index: 9999;
 }
 
+/* CONTAINER ALIGNMENT */
 .header-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 15px 20px;
+  padding: 12px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+/* BRAND LOGO */
 .brand-logo {
   font-weight: 700;
   font-size: 18px;
-  color: #ffffff;
-  text-decoration: none;
+  color: #ffffff !important;
+  text-decoration: none !important;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
 
+/* UNIFORM BUTTON MENU LINKS */
 .nav-menu {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 12px;
 }
 
+/* Removes default blue/underlined link styling and applies button style */
 .nav-menu a {
-  color: #a0a0a0;
-  text-decoration: none;
+  color: #ffffff !important;
+  border: 1px solid #333333;
+  background-color: #1a1a1a;
+  padding: 8px 16px;
+  border-radius: 4px;
+  text-decoration: none !important;
   font-size: 14px;
-  font-weight: 500;
-  transition: color 0.2s ease;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  display: inline-block;
 }
 
 .nav-menu a:hover {
-  color: #ffffff;
+  background-color: #333333;
+  border-color: #555555;
+  color: #ffffff !important;
 }
 
-/* PAY INVOICE BUTTON */
+/* HIGHLIGHTED PAY INVOICE BUTTON */
 .nav-menu .nav-pay-btn {
-  color: #ffffff;
   border: 1px solid #ffffff;
-  padding: 8px 16px;
-  border-radius: 4px;
-  font-weight: 600;
-  transition: all 0.2s ease;
+  background-color: transparent;
 }
 
 .nav-menu .nav-pay-btn:hover {
   background-color: #ffffff;
-  color: #000000;
+  color: #000000 !important;
+}
+
+/* PREVENT BODY CONTENT FROM SLIDING UNDER FIXED HEADER */
+body {
+  padding-top: 70px;
 }
     </style>
     
