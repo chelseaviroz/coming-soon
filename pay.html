@@ -4,9 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pay Invoice | Geno's Euro Garage</title>
-  <script 
-  src="https://www.paypal.com/sdk/js?client-id=BAAeBec7ML7L7uTyRaFKFxbkI4o_N5vcoh9OjCFWdOiorAlhHevsTI5zXdjYqPopIgfk3ouMIq2sn18udQ&components=hosted-buttons&enable-funding=venmo&currency=USD">
-</script>
   <style>
     * {
       box-sizing: border-box;
@@ -47,30 +44,6 @@
       font-size: 15px;
       line-height: 1.5;
     }
-    .form-group {
-      margin-bottom: 20px;
-    }
-    label {
-      display: block;
-      font-size: 14px;
-      color: #cccccc;
-      margin-bottom: 8px;
-      font-weight: 500;
-    }
-    input {
-      width: 100%;
-      padding: 12px 16px;
-      background-color: #242424;
-      border: 1px solid #3d3d3d;
-      border-radius: 6px;
-      color: #ffffff;
-      font-size: 15px;
-      outline: none;
-      transition: border-color 0.2s ease;
-    }
-    input:focus {
-      border-color: #ffffff;
-    }
     .btn {
       display: block;
       width: 100%;
@@ -104,9 +77,17 @@
       height: 16px;
       fill: currentColor;
     }
-    .footer-note {
+    .fine-print {
       margin-top: 24px;
-      padding-top: 20px;
+      font-size: 11px;
+      color: #777777;
+      line-height: 1.4;
+      text-align: center;
+      font-style: italic;
+    }
+    .footer-note {
+      margin-top: 16px;
+      padding-top: 16px;
       border-top: 1px solid #2d2d2d;
       text-align: center;
       font-size: 13px;
@@ -121,19 +102,19 @@
       <h1>Online Payment Portal</h1>
       <p>Pay your invoice securely for on-site diagnostic, repair, or maintenance services.</p>
     </div>
-    
-<div id="paypal-container-GFZY8AMJNW2ZQ"></div>
-<script>
-  paypal.HostedButtons({
-    hostedButtonId: "GFZY8AMJNW2ZQ",
-  }).render("#paypal-container-GFZY8AMJNW2ZQ")
-</script>
+
+    <!-- REPLACE LINK BELOW WITH YOUR STRIPE OR SQUARE PAYMENT LINK -->
+    <a href="YOUR_PAYMENT_PROCESSOR_LINK_HERE" class="btn">Proceed to Secure Checkout</a>
 
     <div class="security-notice">
       <svg viewBox="0 0 24 24">
         <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/>
       </svg>
       Encrypted 256-bit Secure Transaction
+    </div>
+
+    <div class="fine-print">
+      Notice: A $20 fee will be applied to your balance for any transactions returned or declined due to insufficient funds. Please verify that adequate funds are available prior to submitting payment.
     </div>
 
     <div class="footer-note">
