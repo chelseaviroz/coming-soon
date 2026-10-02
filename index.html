@@ -138,25 +138,36 @@
             font-size: 0.75rem;
             color: #64748b;
         }
-     /* FIXED TOP NAVIGATION BAR */
-.top-header {
+/* RESET BODY MARGINS TO PREVENT EDGE GAPS */
+html, body {
+  margin: 0;
+  padding: 0;
   width: 100%;
-  background-color: #121212;
-  border-bottom: 1px solid #2d2d2d;
-  position: fixed; /* Fixes bar directly to top of viewport */
-  top: 0;
-  left: 0;
-  z-index: 9999;
 }
 
-/* CONTAINER ALIGNMENT */
+/* FLUSH TOP NAVIGATION BAR */
+.top-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100vw; /* Forces full viewport width */
+  box-sizing: border-box;
+  background-color: #121212;
+  border-bottom: 1px solid #2d2d2d;
+  z-index: 99999;
+}
+
+/* HEADER CONTAINER */
 .header-container {
   max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
-  padding: 12px 20px;
+  padding: 14px 24px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-sizing: border-box;
 }
 
 /* BRAND LOGO */
@@ -169,14 +180,13 @@
   letter-spacing: 0.5px;
 }
 
-/* UNIFORM BUTTON MENU LINKS */
+/* BUTTON MENU LINKS */
 .nav-menu {
   display: flex;
   align-items: center;
   gap: 12px;
 }
 
-/* Removes default blue/underlined link styling and applies button style */
 .nav-menu a {
   color: #ffffff !important;
   border: 1px solid #333333;
@@ -207,9 +217,9 @@
   color: #000000 !important;
 }
 
-/* PREVENT BODY CONTENT FROM SLIDING UNDER FIXED HEADER */
+/* PUSHES MAIN PAGE CONTENT DOWN BELOW FIXED HEADER */
 body {
-  padding-top: 70px;
+  padding-top: 80px !important;
 }
     </style>
     
