@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment confirmed. Thank you for your business! | Geno's Euro Garage</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+    }
+    body {
+      background-color: #121212;
+      color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+    .card {
+      background-color: #1a1a1a;
+      border: 1px solid #333333;
+      border-radius: 12px;
+      max-width: 550px;
+      width: 100%;
+      padding: 40px 30px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+    .icon-container {
+      width: 70px;
+      height: 70px;
+      background-color: #10B981;
+      color: #ffffff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px auto;
+    }
+    .icon-container svg {
+      width: 40px;
+      height: 40px;
+    }
+    h1 {
+      font-size: 26px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: #ffffff;
+    }
+    p {
+      color: #a0a0a0;
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+    .details-box {
+      background-color: #242424;
+      border: 1px solid #2d2d2d;
+      border-radius: 8px;
+      padding: 16px;
+      margin-bottom: 28px;
+      text-align: left;
+    }
+    .details-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+      color: #cccccc;
+      margin-bottom: 8px;
+    }
+    .details-row:last-child {
+      margin-bottom: 0;
+    }
+    .details-row span.label {
+      color: #888888;
+    }
+    .btn {
+      display: inline-block;
+      width: 100%;
+      background-color: #ffffff;
+      color: #000000;
+      font-weight: 700;
+      padding: 14px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background-color 0.2s ease;
+    }
+    .btn:hover {
+      background-color: #e0e0e0;
+    }
+    .footer-note {
+      margin-top: 20px;
+      font-size: 13px;
+      color: #666666;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <div class="icon-container">
+      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path>
+      </svg>
+    </div>
+
+    <h1>Payment Confirmed!</h1>
+    <p>Thank you for choosing Geno’s Euro Garage. Your payment has been successfully processed, and your digital receipt has been sent to your email.</p>
+
+    <div class="details-box">
+      <div class="details-row">
+        <span class="label">Status:</span>
+        <span style="color: #10B981; font-weight: 600;">Paid</span>
+      </div>
+      <div class="details-row">
+        <span class="label">Reference ID:</span>
+        <span id="reference-id">#GENO-SUCCESS</span>
+      </div>
+    </div>
+
+    <a href="https://genoseurogarage.com" class="btn">Return to Homepage</a>
+
+    <div class="footer-note">
+      Questions about your invoice or service session? Call or text us at <strong>706-963-0193</strong>.
+    </div>
+  </div>
+
+  <script>
+    // Automatically extracts reference or session IDs from URL parameters (e.g., success.html?session_id=12345)
+    const urlParams = new URLSearchParams(window.location.search);
+    const sessionId = urlParams.get('session_id') || urlParams.get('payment_intent') || urlParams.get('tx');
+    
+    if (sessionId) {
+      document.getElementById('reference-id').textContent = '#' + sessionId.substring(0, 12).toUpperCase();
+    }
+  </script>
+
+</body>
+</html>
