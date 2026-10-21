@@ -15,6 +15,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Service, Return, & Warranty Policy | Geno’s Euro Garage LLC</title>
     <style>
+        /* FLUSH TOP NAVIGATION BAR */
+.top-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  box-sizing: border-box;
+  background-color: #121212;
+  border-bottom: 1px solid #2d2d2d;
+  z-index: 99999;
+}
+
+/* HEADER CONTAINER */
+.header-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 14px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* BRAND LOGO */
+.brand-logo {
+  font-weight: 700;
+  font-size: 18px;
+  color: #ffffff !important;
+  text-decoration: none !important;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* BUTTON MENU LINKS */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav-menu a {
+  color: #ffffff !important;
+  border: 1px solid #333333;
+  background-color: #1a1a1a;
+  padding: 8px 16px;
+  border-radius: 4px;
+  text-decoration: none !important;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  display: inline-block;
+}
+
+.nav-menu a:hover {
+  background-color: #333333;
+  border-color: #555555;
+  color: #ffffff !important;
+}
+
+/* PUSHES MAIN CONTENT DOWN BELOW FIXED HEADER */
+body {
+  padding-top: 80px !important;
+}
         :root {
             --primary-color: #1a252f;
             --accent-color: #d9534f;
